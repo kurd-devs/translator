@@ -1,5 +1,5 @@
 {
-    "name": "tpg/pirates-translator",
+    "name": "tpc/pirates-translator",
     "description": "This package provides hiegh performance danymic localization with lazy loading abilty",
     "keywords": ["laravel", "localization", "lazy localization", "pirates translator"],
     "license": "MIT",
