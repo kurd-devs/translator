@@ -1,6 +1,6 @@
 <?php
 
-namespace TPG\Translator\Models;
+namespace TPC\Translator\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

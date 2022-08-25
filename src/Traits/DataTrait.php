@@ -1,6 +1,6 @@
 <?php
 
-namespace TPG\Translator\Traits;
+namespace TPC\Translator\Traits;
 
 use Illuminate\Support\Facades\Validator;
 
@@ -56,7 +56,7 @@ trait DataTrait
         if ($validator->fails()) return false;
 
         $conditions = \Arr::except($data, ['value']);
-        $newRecord = \TPG\Translator\Models\PirateTranslation::firstOrNew($conditions, $data);
+        $newRecord = \TPC\Translator\Models\PirateTranslation::firstOrNew($conditions, $data);
         if ($newRecord->exists) {
             return false;
         } else {
@@ -76,7 +76,7 @@ trait DataTrait
         ]);
 
         if ($validator->fails()) return false;
-        $updatedRecord = \TPG\Translator\Models\PirateTranslation::where('id', $data['id'])->update($data);
+        $updatedRecord = \TPC\Translator\Models\PirateTranslation::where('id', $data['id'])->update($data);
         if($updatedRecord){
             \PirateTranslator::updateTableCache($data['locale'], $data['table_name']);
         }
@@ -96,7 +96,7 @@ trait DataTrait
 
             if ($validator->fails()) return false;
         }
-        $newRecord = \TPG\Translator\Models\PirateTranslation::insertOrIgnore($data);
+        $newRecord = \TPC\Translator\Models\PirateTranslation::insertOrIgnore($data);
         if($newRecord){
             $tables = collect($data)->unique(['locale', 'table_name'])->pluck('table_name', 'locale');
             // dd($data, $tables);

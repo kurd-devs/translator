@@ -1,6 +1,6 @@
 <?php
 
-namespace TPG\Translator;
+namespace TPC\Translator;
 
 use Illuminate\Support\Facades\Facade;
 

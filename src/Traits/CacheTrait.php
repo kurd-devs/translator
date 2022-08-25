@@ -1,6 +1,6 @@
 <?php
 
-namespace TPG\Translator\Traits;
+namespace TPC\Translator\Traits;
 
 trait CacheTrait
 {
@@ -8,7 +8,7 @@ trait CacheTrait
     public function cachePage(string $locale, string $route_name)
     {
         return cache()->rememberForever("pirates_translation_page_{$route_name}", function () {
-            $data = json_decode(\TPG\Translator\Models\PirateTranslationPage::where('route_name', request()->route()->getName())->first()->table_names);
+            $data = json_decode(\TPC\Translator\Models\PirateTranslationPage::where('route_name', request()->route()->getName())->first()->table_names);
             return $data;
         });
     }
@@ -16,7 +16,7 @@ trait CacheTrait
     public function cacheTable(string $locale, string $table_name)
     {
         return cache()->rememberForever("{$table_name}_{$locale}", function () use ($table_name) {
-            $data = \TPG\Translator\Models\PirateTranslation::select(['column_name', 'phrase_key', 'value'])
+            $data = \TPC\Translator\Models\PirateTranslation::select(['column_name', 'phrase_key', 'value'])
                 ->where('locale', 'en')
                 ->where('table_name', $table_name)
                 ->get()
@@ -33,7 +33,7 @@ trait CacheTrait
     public function cacheAll(string $locale)
     {
         return cache()->rememberForever("data_$locale", function () {
-            $data = \TPG\Translator\Models\PirateTranslation::select(['table_name', 'column_name', 'phrase_key', 'value'])
+            $data = \TPC\Translator\Models\PirateTranslation::select(['table_name', 'column_name', 'phrase_key', 'value'])
                 ->where('locale', 'en')
                 ->get()
                 ->groupBy('table_name')

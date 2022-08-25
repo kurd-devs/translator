@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use TPG\Translator\Models\PirateTranslationPage;
+use TPC\Translator\Models\PirateTranslationPage;
 
 class PagesTableSeeder extends Seeder
 {

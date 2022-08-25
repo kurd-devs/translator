@@ -1,9 +1,9 @@
 <?php
 
-namespace TPG\Translator\Models;
+namespace TPC\Translator\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use TPG\Translator\Observers\TranslationObserver;
+use TPC\Translator\Observers\TranslationObserver;
 
 class PirateTranslation extends Model
 {

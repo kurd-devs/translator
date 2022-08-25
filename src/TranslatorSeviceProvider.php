@@ -1,15 +1,15 @@
 <?php
 
-namespace TPG\Translator;
+namespace TPC\Translator;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
-use TPG\Translator\Commands\CacheCommand;
-use TPG\Translator\Commands\InstallCommand;
-use TPG\Translator\Models\PirateTranslation;
-use TPG\Translator\Models\PirateTranslationPage;
-use TPG\Translator\Observers\TranslationObserver;
-use TPG\Translator\Observers\TranslationPageObserver;
+use TPC\Translator\Commands\CacheCommand;
+use TPC\Translator\Commands\InstallCommand;
+use TPC\Translator\Models\PirateTranslation;
+use TPC\Translator\Models\PirateTranslationPage;
+use TPC\Translator\Observers\TranslationObserver;
+use TPC\Translator\Observers\TranslationPageObserver;
 
 class TranslatorSeviceProvider extends ServiceProvider
 {

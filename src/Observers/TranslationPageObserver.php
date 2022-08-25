@@ -1,8 +1,8 @@
 <?php
 
-namespace TPG\Translator\Observers;
+namespace TPC\Translator\Observers;
 
-use TPG\Translator\Models\PirateTranslationPage;
+use TPC\Translator\Models\PirateTranslationPage;
 
 class TranslationPageObserver
 {

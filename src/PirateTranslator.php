@@ -1,9 +1,9 @@
 <?php
 
-namespace TPG\Translator;
+namespace TPC\Translator;
 
-use TPG\Translator\Traits\CacheTrait;
-use TPG\Translator\Traits\DataTrait;
+use TPC\Translator\Traits\CacheTrait;
+use TPC\Translator\Traits\DataTrait;
 
 class PirateTranslator
 {

@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "TPG\\Translator\\": "src/",
+            "TPC\\Translator\\": "src/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "TPG\\Translator\\TranslatorSeviceProvider"
+                "TPC\\Translator\\TranslatorSeviceProvider"
             ]
         }
     },

@@ -1,12 +1,12 @@
 <?php
 
-namespace TPG\Translator\Commands;
+namespace TPC\Translator\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Composer;
 use Symfony\Component\Console\Input\InputOption;
-use TPG\Translator\TranslatorSeviceProvider;
+use TPC\Translator\TranslatorSeviceProvider;
 
 class InstallCommand extends Command
 {
