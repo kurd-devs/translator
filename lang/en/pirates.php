@@ -3,7 +3,7 @@
 
 $tables = cache()->rememberForever('pirates_translation_page_'.request()->route()->getName(), function ()
 {
-    $data = PirateTranslator::cachePage('en', request()->route()->getName());
+    $data = PirateTranslator::cachePage(request()->route()->getName());
     
     return $data;
 });

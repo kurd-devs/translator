@@ -5,7 +5,7 @@ namespace TPC\Translator\Traits;
 trait CacheTrait
 {
 
-    public function cachePage(string $locale, string $route_name)
+    public function cachePage(string $route_name)
     {
         return cache()->rememberForever("pirates_translation_page_{$route_name}", function () {
             $data = json_decode(\TPC\Translator\Models\PirateTranslationPage::where('route_name', request()->route()->getName())->first()->table_names);
@@ -50,10 +50,10 @@ trait CacheTrait
         });
     }
 
-    public function updatePageCache(string $locale, string $route_name)
+    public function updatePageCache(string $route_name)
     {
         cache()->forget("pirates_translation_page_{$route_name}");
-        $this->cachePage($locale, $route_name);
+        $this->cachePage($route_name);
     }
 
     public function updateTableCache(string $locale, string $table_name)
