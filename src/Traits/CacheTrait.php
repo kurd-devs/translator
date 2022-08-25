@@ -7,7 +7,7 @@ trait CacheTrait
 
     public function cachePage(string $route_name)
     {
-        return cache()->rememberForever("pirates_translation_page_{$route_name}", function () {
+        return cache()->rememberForever("pirates_translation_page_{$route_name}", function () use($route_name) {
             $data = json_decode(\TPC\Translator\Models\PirateTranslationPage::where('route_name', $route_name)->first()->table_names);
             return $data;
         });
